@@ -1,0 +1,547 @@
+/* ==================================================
+   Alba Valls Carol - CV website
+   CSS based on the colours and layout of the Figma
+   ================================================== */
+
+
+/* 1. COLOURS */
+:root {
+    --navy: #14213D;
+    --orange: #F28C28;
+    --orange-dark: #C2540F;
+    --cream: #FBF6EC;
+    --beige: #EFE3CC;
+    --line: #D9CBB0;
+    --text: #1F1F1F;
+    --muted: #6B6558;
+}
+
+
+/* 2. GENERAL STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--cream);
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', Arial, sans-serif;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+
+/* 3. NAVIGATION */
+
+.topbar {
+    background-color: var(--cream);
+    border-bottom: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 6%;
+}
+
+.logo {
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+.topbar nav a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.topbar nav a:hover {
+    color: var(--orange-dark);
+}
+
+
+/* 4. MAIN INTRODUCTION */
+.hero {
+    background-color: var(--navy);
+    color: var(--cream);
+    padding: 80px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.hero-copy {
+    max-width: 620px;
+}
+
+.eyebrow {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+}
+
+.hero h1 {
+    font-size: 76px;
+    font-weight: 300;
+    letter-spacing: 7px;
+    line-height: 1.15;
+    margin-bottom: 24px;
+}
+
+.hero-intro {
+    color: var(--beige);
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 32px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.button-primary {
+    background-color: var(--orange);
+    color: #111111;
+    border: 1px solid var(--orange);
+}
+
+.button-primary:hover {
+    background-color: var(--cream);
+    border-color: var(--cream);
+}
+
+.button-outline {
+    color: var(--cream);
+    border: 1px solid var(--cream);
+}
+
+.button-outline:hover {
+    background-color: var(--cream);
+    color: var(--navy);
+}
+
+.portrait {
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid var(--cream);
+}
+
+
+/* 5. SECTION HEADINGS */
+.section {
+    padding: 80px 6%;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.accent {
+    display: block;
+    width: 48px;
+    height: 3px;
+    background-color: var(--orange);
+    margin-bottom: 12px;
+}
+
+.section-number {
+    color: var(--orange-dark);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+
+
+/* 6. PROFILE */
+.profile {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 64px;
+}
+
+.profile .section-heading {
+    margin-bottom: 0;
+}
+
+.profile-text {
+    font-size: 19px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background-color: var(--beige);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.stat strong {
+    display: block;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 52px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--orange-dark);
+    margin-bottom: 8px;
+}
+
+.stat p {
+    font-size: 15px;
+}
+
+
+/* 7. EXPERIENCE */
+.experience {
+    background-color: var(--beige);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.job-card {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 40px;
+    background-color: var(--cream);
+    border-radius: 12px;
+    padding: 32px 40px;
+}
+
+.job-date {
+    color: var(--orange-dark);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.job-card h3 {
+    color: var(--navy);
+    font-size: 22px;
+    margin-bottom: 6px;
+}
+
+.job-role {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.job-card div p {
+    margin-bottom: 6px;
+}
+
+
+/* 8. EDUCATION */
+.education-featured {
+    background-color: var(--navy);
+    color: var(--beige);
+    border-radius: 16px;
+    padding: 40px 48px;
+    margin-bottom: 24px;
+}
+
+.education-featured h3 {
+    color: var(--cream);
+    font-size: 30px;
+    margin: 8px 0;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.education-card {
+    background-color: var(--beige);
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.education-card h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin: 8px 0;
+}
+
+.education-card p:last-child {
+    color: var(--muted);
+    font-size: 15px;
+}
+
+
+/* 9. SKILLS AND LANGUAGES */
+.skills-section {
+    background-color: var(--beige);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+}
+
+.skill-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.skill-chips span {
+    background-color: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 12px 18px;
+    color: var(--navy);
+}
+
+.language {
+    margin-bottom: 24px;
+}
+
+.language div:first-child {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.language strong {
+    color: var(--orange-dark);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.track {
+    background-color: var(--line);
+    border-radius: 4px;
+    height: 8px;
+}
+
+.track span {
+    display: block;
+    background-color: var(--orange);
+    border-radius: 4px;
+    height: 8px;
+}
+
+
+/* 10. CONTACT */
+.contact-section {
+    background-color: var(--navy);
+    color: var(--cream);
+}
+
+.contact-section .section-heading h2 {
+    color: var(--cream);
+}
+
+.contact-intro {
+    color: var(--beige);
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 40px;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.contact-grid article {
+    border: 1px solid #5B6579;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.contact-grid article p {
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+
+.contact-grid a,
+.contact-grid article span {
+    font-size: 16px;
+    overflow-wrap: anywhere;
+}
+
+footer {
+    border-top: 1px solid #5B6579;
+    color: var(--beige);
+    font-size: 13px;
+    margin-top: 64px;
+    padding-top: 24px;
+}
+
+
+/* 11. RESPONSIVE DESIGN
+   These rules apply to smaller screens. */
+
+@media (max-width: 900px) {
+    .topbar {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .topbar nav {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .hero {
+        gap: 32px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: 4px;
+    }
+
+    .portrait {
+        width: 240px;
+        height: 240px;
+    }
+
+    .profile {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .skills-section {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        padding: 20px 6%;
+    }
+
+    .topbar nav {
+        gap: 12px;
+    }
+
+    .topbar nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 48px 6%;
+    }
+
+    .portrait {
+        width: 220px;
+        height: 220px;
+        align-self: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-intro {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 56px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .education-featured {
+        padding: 28px;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .job-card {
+        padding: 24px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
